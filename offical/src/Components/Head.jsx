@@ -15,10 +15,10 @@ function Head() {
           <div className=" font">
             <nav className=" space-x-6">
               <a href=" #"> Home</a>
-              <a href="#"> About</a>
+              <a href="#"> Collection</a>
+              <a href="#"> ContactUs</a>
               <a href="#"> Track Your Order</a>
-              <a href="#"> Services</a>
-              <a href=" #"> Contact</a>
+              <a href=" #"> Sales</a>
             </nav>
           </div>
           {/* button  */}
