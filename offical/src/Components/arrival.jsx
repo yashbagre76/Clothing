@@ -14,51 +14,51 @@ function Arrival() {
   const products = [
     {
       id: 1,
-      name: "High-Offense Hoodie",
+      name: "Kissing Shirt",
       price: 1200,
-      img: "/img/t-shirt.webp",
+      img: "/public/img/shirt3.jpg",
     },
     {
       id: 2,
-      name: "Basic Hoodie",
+      name: "Basic Shirt",
       price: 799,
-      img: "/img/HOODEI-SILVER.jpg",
+      img: "/public/img/t.jpg",
     },
     {
       id: 3,
       name: "Protect Yourself",
       price: 1198,
-      img: "/img/HOODEI-BROWUN.jpg",
+      img: "/public/img/shirt7.webp",
     },
     {
       id: 4,
       name: "Light Hoodie",
       price: 1300,
-      img: "/img/HOODEI-LT.jpg",
+      img: "/public/img/shirt5.webp",
     },
     {
       id: 5,
       name: "Zipper Hoodie - Blue",
       price: 1700,
-      img: "/img/blue.webp",
+      img: "/public/img/shirt4.webp",
     },
     {
       id: 6,
       name: "Zipper Hoodie",
       price: 1700,
-      img: "/img/IMG_4378.webp",
+      img: "/public/img/shirt8.webp",
     },
     {
       id: 7,
       name: "Winter Jacket",
       price: 2500,
-      img: "/img/jacket.jpg",
+      img: "/public/img/t-shirt2.webp",
     },
     {
       id: 8,
       name: "Casual Hoodie",
       price: 999,
-      img: "/img/casual-hoodie.jpg",
+      img: "/public/img/t-shirt2.webp",
     },
   ];
 
@@ -98,6 +98,10 @@ function Arrival() {
                   "&:hover": {
                     transform: "scale(1.2) rotate(2deg)",
                   },
+                }}
+                onError={(e) => {
+                  e.target.src = "/img/fallback.jpg"; // Provide a fallback image path
+                  e.target.onerror = null;
                 }}
               />
               <CardContent

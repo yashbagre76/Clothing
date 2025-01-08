@@ -48,7 +48,7 @@ function Shopify() {
       id: 6,
       name: "Zipper Hoodie",
       price: 1700,
-      img: "/img/blue.webp",
+      img: "/public/img/blue.webp",
     },
   ];
 
