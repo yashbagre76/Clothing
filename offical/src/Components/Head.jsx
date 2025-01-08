@@ -1,48 +1,82 @@
 import React from "react";
+import { AppBar, Toolbar, Button, Box } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+import PersonIcon from "@mui/icons-material/Person";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 function Head() {
   return (
-    <>
-      <header className="bg-fuchsia-200 text-white">
-        <div className="container mx-auto flex items-center justify-between p-4">
-          {/* Logo Section */}
-          <div>
-            <a href="#">
-              <img src="/img/allstag.png" alt="Logo" className="h-12 w-auto" />
-            </a>
-          </div>
-          {/* Navigation */}
-          <nav className="flex space-x-6">
-            <a href="#">Home</a>
-            <a href="#">Collection</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Track Your Order</a>
-            <a href="#">Sales</a>
-          </nav>
-          {/* Buttons */}
-          <div className="flex gap-2">
-            <button className="bg-fuchsia-900 px-4 py-2 rounded hover:bg-fuchsia-950 flex items-center">
-              <span role="img" aria-label="search">
-                🔍
-              </span>
-              <span className="ml-1">Search</span>
-            </button>
-            <button className="bg-fuchsia-900 px-4 py-2 rounded hover:bg-fuchsia-950 flex items-center">
-              <span role="img" aria-label="login">
-                👤
-              </span>
-              <span className="ml-1">Login</span>
-            </button>
-            <button className="bg-fuchsia-900 px-4 py-2 rounded hover:bg-fuchsia-950 flex items-center">
-              <span role="img" aria-label="cart">
-                🛒
-              </span>
-              <span className="ml-1">Cart</span>
-            </button>
-          </div>
-        </div>
-      </header>
-    </>
+    <AppBar position="static" sx={{ backgroundColor: "black", color: "white" }}>
+      <Toolbar sx={{ justifyContent: "space-between" }}>
+        {/* Logo Section */}
+        <Box>
+          <img
+            src="/img/allstag.png"
+            alt="Logo"
+            style={{ height: "50px", width: "auto" }}
+          />
+        </Box>
+
+        {/* Navigation */}
+        <Box sx={{ display: "flex", gap: 3 }}>
+          <Button color="inherit" href="/Home">
+            Home
+          </Button>
+          <Button color="inherit" href="#">
+            Collection
+          </Button>
+          <Button color="inherit" href="/contact-us">
+            Contact Us
+          </Button>
+          <Button color="inherit" href="#">
+            Track Your Order
+          </Button>
+          <Button color="inherit" href="#">
+            Sales
+          </Button>
+        </Box>
+
+        {/* Buttons */}
+        <Box sx={{ display: "flex", gap: 1 }}>
+          <Button
+            variant="contained"
+            color="secondary"
+            startIcon={<SearchIcon />}
+            sx={{
+              backgroundColor: "white",
+              color: "black",
+              ":hover": { backgroundColor: "#d3d3d3" },
+            }}
+          >
+            Search
+          </Button>
+          <Button
+            variant="contained"
+            color="secondary"
+            startIcon={<PersonIcon />}
+            sx={{
+              backgroundColor: "white",
+              color: "black",
+              ":hover": { backgroundColor: "#d3d3d3" },
+            }}
+          >
+            Login
+          </Button>
+          <Button
+            variant="contained"
+            color="secondary"
+            startIcon={<ShoppingCartIcon />}
+            sx={{
+              backgroundColor: "white",
+              color: "black",
+              ":hover": { backgroundColor: "#d3d3d3" },
+            }}
+          >
+            Cart
+          </Button>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 }
 
